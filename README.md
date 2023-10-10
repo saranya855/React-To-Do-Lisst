@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First 
+
+Make sure to use node version above 18
+
+run npm i  (To install the necessary packages)
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -23,6 +29,17 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+
+Once  nextjs is installed make use you have mongodb and mongodb compass installed
+ 
+reference
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-20-04
+
+https://linuxways.net/ubuntu/how-to-install-mongodb-compass-in-ubuntu-20-04/
+
+Once the mongodb is setup copy  the connection string from mongodb compass and assign it to the 
 
 ## Learn More
 
