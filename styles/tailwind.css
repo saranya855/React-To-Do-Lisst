@@ -1,0 +1,25 @@
+/* Import the default Tailwind CSS styles */
+@import 'tailwindcss/base';
+
+/* Customize the base styles here, if needed */
+
+/* Import the default Tailwind CSS components */
+@import 'tailwindcss/components';
+
+/* Customize the component styles here, if needed */
+
+/* Import your own custom CSS styles or define them directly */
+/* For example, you can add custom utility classes or component-specific styles */
+.my-custom-button {
+  background-color: #3490dc;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* Import the default Tailwind CSS utilities */
+@import 'tailwindcss/utilities';
+
+/* Customize the utility styles here, if needed */
+
+/* Add your own custom utility classes here, if needed */
