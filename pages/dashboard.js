@@ -5,11 +5,12 @@ import Layout from '@/components/Layout';
 import db from '@/backend/db';
 import { Task } from '@/utils/db';
 import TaskCard from '@/components/Taskcard';
+import { useRouter } from 'next/router';
+import { useState,useEffect } from 'react';
 
 function Dashboard({ tasks, userId }) {
   // Retrieve user session information
   const { data: session } = useSession();
-
   if (!session) {
     // If the user is not authenticated, you can redirect to the login page or handle it accordingly
     return (
@@ -23,7 +24,9 @@ function Dashboard({ tasks, userId }) {
       </div>
     );
   }
-
+ 
+  
+  
   return (
     <div>
       <header>
@@ -38,25 +41,23 @@ function Dashboard({ tasks, userId }) {
           </Link>
           <div className='p-24 grid grid-flow-col grid-row-2 gap-7 overflow-scroll sc '>
 
-            {tasks.map((task) => (
-              <>
-
-                <TaskCard key={task._id} task={task} />
-              </>
-
-            ))}
+          {tasks.map((task) => (
+  // Check if task.status is true before rendering the TaskCard
+  task.status ? (
+    <TaskCard key={task._id} task={task} />
+  ) : null
+))}
         
           </div>
           <h1 className="text-3xl pl-24 font-bold pb-10 pt-20">Urgent</h1>
         <div className='pl-24 grid grid-flow-row grid-cols-2 gap-7'>
 
-            {tasks.map((task) => (
-              <>
-
-                <TaskCard key={task._id} task={task} />
-              </>
-
-            ))}
+        {tasks.map((task) => (
+  // Check if task.status is true before rendering the TaskCard
+  task.status ? (
+    <TaskCard key={task._id} task={task} />
+  ) : null
+))}
           </div>
 
         </Layout>
