@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { signUp } from 'next-auth'; // Assuming you are using next-auth for authentication
 import Link from 'next/link';
+import db from '@/backend/db';
 import toast from 'react-hot-toast';
 import { getError } from '@/utils/error';
 import axios from 'axios';

@@ -1,8 +1,9 @@
 import bcryptjs from 'bcryptjs';
 import { User } from '@/utils/db';
-import db from '@/backend/db';
+
 import { getSession } from 'next-auth/react';
 import { getError } from '../../../utils/error';
+import db from '@/backend/db';
 async function handler(req, res) {
   
   // Create a new user

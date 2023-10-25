@@ -36,6 +36,8 @@ function Dashboard({ tasks, userId }) {
           <Link className="text-indigo-500  bg-violet pl-24 hover:underline" href="/tasks/add">
             Add Task
           </Link>
+          
+         
           <div className='p-24 grid grid-flow-col grid-row-2 gap-7 overflow-scroll sc '>
 
             {tasks.map((task) => (
@@ -45,6 +47,7 @@ function Dashboard({ tasks, userId }) {
               </>
 
             ))}
+        
         
           </div>
           <h1 className="text-3xl pl-24 font-bold pb-10 pt-20">Urgent</h1>
@@ -58,7 +61,7 @@ function Dashboard({ tasks, userId }) {
 
             ))}
           </div>
-
+          
         </Layout>
       </main>
     </div>

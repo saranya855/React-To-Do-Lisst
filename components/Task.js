@@ -7,7 +7,7 @@ function Task({ task, onDelete, onUpdate }) {
   const handleEditClick = () => {
     setIsEditing(true);
   };
-
+ 
   const handleCancelClick = () => {
     setIsEditing(false);
     setUpdatedText(task.text);
